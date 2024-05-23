@@ -4,9 +4,9 @@
 
 /*
 	*****************************************************************************
-	*	Programa realizado por: Rogelio Ivan Meza Elizalde						*
-	*		Programaci髇 estructurada 1癒										*
-	*																			*		
+	*	Programa realizado por: lrkRocky				    *
+	*		Programaci贸n estructurada 1掳K				    *
+	*									    *		
 	*****************************************************************************
 	
 		Este programa es un juego de ahorcado en el que el usuario ingresa la palabra y posteriormente el mismo u otro la adivina.
@@ -16,7 +16,7 @@ void monito();
 void main(){
 	int size = 0;
 	char letra;
-	char palabra[20];			//Declaraci髇 de valores iniciales y variables por utilizar.
+	char palabra[20];			//Declaraci贸n de valores iniciales y variables por utilizar.
 	char adivinada[20];
 	
 	printf("\nBuenas tardes \n");
@@ -35,18 +35,18 @@ void main(){
 		system("CLS");
 		int i;
 		for(i = 0; palabra[i] != '\0' ; i++ ){
-			size++;									//Determina el tama駉 de la palabra ingresada.
+			size++;									//Determina el tama帽o de la palabra ingresada.
 		}
 		for(i = 0; i < size ; i++ ){
-			adivinada[i] = '-';						//Asignaci髇 de valores a palabra que ira siendo sustituida conforme se adivinen letras.
+			adivinada[i] = '-';						//Asignaci贸n de valores a palabra que ira siendo sustituida conforme se adivinen letras.
 		}
 		adivinada[size] = '\0';						//Asegura que el valor de la palabra por construir termine en valor nulo, al igual que la palabra por adivinar.
 		printf("\n\n\n\n \t");
 		for(i = 0; i < size ; i++ ){
-			printf("- ");							//Dibujo de la palabra oculta dependiente del tama駉 de la misma.
+			printf("- ");							//Dibujo de la palabra oculta dependiente del tama帽o de la misma.
 		}
 		printf("\n \t");
-		for(i = 0; i < size ; i++ ){				//Indicaci髇 del numero de casilla o caracter para el dibujo hecho anteriormente.
+		for(i = 0; i < size ; i++ ){				//Indicaci贸n del numero de casilla o caracter para el dibujo hecho anteriormente.
 			printf("%d ",(i+1));	
 		}
 		printf("\n");
@@ -54,9 +54,9 @@ void main(){
 		int flag = 0;
 		int No_ganador = 0;
 		for(intentos = 7; intentos > 0; intentos --){
-			printf("\n\n\n\n La palabra por adivinar contiene %d  letras \n", size);	//Instrucciones e informaci髇 para usuario.
+			printf("\n\n\n\n La palabra por adivinar contiene %d  letras \n", size);	//Instrucciones e informaci贸n para usuario.
 			printf("A usted le quedan %d de 7 intentos \n", intentos);
-			monito(intentos);															//Funci髇 de dibujo de figura de ahorcado.
+			monito(intentos);															//Funci贸n de dibujo de figura de ahorcado.
 			printf("Ingrese la letra que cree que cotiene la palabra \n");
 			scanf(" %c",&letra);
 			system("CLS");
@@ -86,7 +86,7 @@ void main(){
 			}
 			if(No_ganador == 0){											
 				printf("La palabra si contiene la letra %c. \n \t", letra);
-				intentos = 0;													//Termina ciclo de iteraci髇 for para llegar a final de juego tras haber ganado.
+				intentos = 0;													//Termina ciclo de iteraci贸n for para llegar a final de juego tras haber ganado.
 			}
 			else{
 				if(flag == 1){
@@ -100,7 +100,7 @@ void main(){
 			flag = 0;
 			No_ganador = 0;
 		}
-		for(i = 0; i < size ; i++ ){			//Estrucutra de iteraci髇 para comparar si la palabra construida adivinando es igual a la establecida inicialmente.
+		for(i = 0; i < size ; i++ ){			//Estrucutra de iteraci贸n para comparar si la palabra construida adivinando es igual a la establecida inicialmente.
 			if( palabra[i] != adivinada[i]){
 				No_ganador = 1;					//Bandera que se activa en caso de que la palabra no haya sido adivinada completamente.
 			}
@@ -122,7 +122,7 @@ void main(){
 			monito(0);
 		}
 		printf(" \n\n\n\n  Inserte 1 si desea volver a jugar, de lo contrario, inserte cualquier otro numero o letra. \n");
-		scanf("%d",&control);		//Ofrece opci髇 de repetir o salir de estructura de iteraci髇 principal del juego.
+		scanf("%d",&control);		//Ofrece opci贸n de repetir o salir de estructura de iteraci贸n principal del juego.
 		system("CLS");
 		size = 0;
 		letra = '\0';				//Reestablece valores iniciales para evitar errores.
@@ -132,7 +132,7 @@ void main(){
 	printf("Fin del juego \n");
 }
 
-void monito(intentos){		//Funci髇 que dibuja el personaje dependiendo el intento en el que se encuentre el usuario.
+void monito(intentos){		//Funci贸n que dibuja el personaje dependiendo el intento en el que se encuentre el usuario.
 	switch(intentos){
 	case 7:
 		printf("\t   _______ \n");
